@@ -43,3 +43,10 @@ jobs:
           files: /node-output/petstore001.yaml /node-output/simple-api-swagger.yaml
           # Defaults to true.
           space_separated: true
+      - name: Swagger-cli
+        # You may pin to the exact commit or the version.
+        # uses: mpetrunic/swagger-cli-action@131b3306027caeca938be0dc11cb474781090103
+        uses: mpetrunic/swagger-cli-action@v1.0.0
+        with:
+          # Swagger-cli command arguments
+          command: swaggerhub api:publish FrancisOrganization1/petstore-001/1.0.0
