@@ -40,6 +40,6 @@ jobs:
         uses: mbowman100/swagger-validator-action@2.0
         with:
           # List of Swagger/OpenAPI file(s) to validate. Seperate each file with a new line or a space.
-          files: ../../node-output/petstore001.yaml ../../node-output/simple-api-swagger.yaml
+          files: /developer/node-output/petstore001.yaml /developer/node-output/simple-api-swagger.yaml
           # Defaults to true.
           space_separated: true
