@@ -33,5 +33,5 @@ steps:
     connectionType: 'connectedServiceNameARM'
     azureServiceConnection: 'Free Trial(1)(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
     method: 'GET'
-    urlSuffix: 'http://echoapi.cloudapp.net/api'
+    #urlSuffix: 'http://echoapi.cloudapp.net/api'
     waitForCompletion: 'false'
