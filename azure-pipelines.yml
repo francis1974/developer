@@ -28,10 +28,10 @@ steps:
     templateLocation: 'URL of the file'
     csmFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/Deploy-AzureResourceGroup.ps1'
     deploymentMode: 'Validation'
+
 - task: InvokeRESTAPI@1
   inputs:
     connectionType: 'connectedServiceNameARM'
-    azureServiceConnection: 'Free Trial(1)(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
-    method: 'GET'
-    #urlSuffix: 'http://echoapi.cloudapp.net/api'
+    azureServiceConnection: 'Free Trial(2)(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
+    method: 'POST'
     waitForCompletion: 'false'
