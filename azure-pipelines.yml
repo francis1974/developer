@@ -35,3 +35,8 @@ steps:
     azureServiceConnection: 'Free Trial(2)(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
     method: 'POST'
     waitForCompletion: 'false'
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    method: 'GET'
+    waitForCompletion: 'false'
