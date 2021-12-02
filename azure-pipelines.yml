@@ -17,3 +17,21 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Free Trial(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
+    subscriptionId: '3a25e9ec-b573-4092-abf3-9cd8e91bf515'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'RG-001'
+    location: 'South India'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/Deploy-AzureResourceGroup.ps1'
+    deploymentMode: 'Validation'
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceNameARM'
+    azureServiceConnection: 'Free Trial(1)(3a25e9ec-b573-4092-abf3-9cd8e91bf515)'
+    method: 'GET'
+    urlSuffix: '/FrancisOrganization1/petstore-001/1.0.0'
+    waitForCompletion: 'false'
